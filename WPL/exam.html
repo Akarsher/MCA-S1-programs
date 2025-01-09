@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Exam</title>
+    <link rel="stylesheet" href="online-exam.css">
+</head>
+<body>
+    <div id="exam">
+        <h1>Online Exam</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. What is the tag used to write javascript code inside html file ?</p>
+                <input type="radio" name="q1" value="script"> script<br>
+                <input type="radio" name="q1" value="php?"> php?<br>
+                <input type="radio" name="q1" value="js"> js<br>
+            </div>
+
+            <div class="question">
+                <p>2. Where is the correct place to insert a JavaScript?</p>
+                <input type="radio" name="q2" value="head"> head<br>
+                <input type="radio" name="q2" value="body"> body<br>
+                <input type="radio" name="q2" value="both are true"> both head and body are true<br>
+            </div>
+            <div class="question">
+                <p>3. What is the extension used to save external javascript file</p>
+                <input type="radio" name="q3" value=".html"> .html<br>
+                <input type="radio" name="q3" value=".js"> .js<br>
+                <input type="radio" name="q3" value=".script"> .script<br>
+            </div>
+            <div class="question">
+                <p>4. Is java and javascript are related ?</p>
+                <input type="radio" name="q4" value="Yes"> Yes<br>
+                <input type="radio" name="q4" value="No"> No<br>
+               
+            </div>
+            <div class="question">
+                <p>5. who invented javascript</p>
+                <input type="radio" name="q5" value="Brendan Eich"> Brendan Eich<br>
+                <input type="radio" name="q5" value="john snow"> john snow<br>
+                <input type="radio" name="q5" value="Tom hiddleston"> Tom hiddleston<br>
+            </div>
+            <button type="button" id="submitBtn">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+<script>
+document.getElementById("submitBtn").addEventListener("click", function () {
+    const answers = { q1: "script", q2: "both are true", q3:".js", q4:"No", q5:"Brendan Eich" }; 
+    const form = document.getElementById("quizForm");
+    let score = 0;
+    let totalQuestions = Object.keys(answers).length;    
+
+    Object.keys(answers).forEach(question => {
+        const userAnswer = form[question].value;
+        if (userAnswer === answers[question]) {
+            score++;
+        }
+    });
+
+    const resultDiv = document.getElementById("result");
+    resultDiv.textContent = `You scored ${score} out of ${totalQuestions}`;
+});
+</script>
+</body>
+</html>
