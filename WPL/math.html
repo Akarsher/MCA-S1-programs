@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            display: block;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .output {
+            padding: 10px;
+            background-color: #e9ecef;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>String and Math Object Functions</h1>
+        <h2>String Functions</h2>
+        <input type="text" id="stringInput" placeholder="Enter a string">
+        <button onclick="stringOperations()">Perform String Operations</button>
+        <div id="stringOutput" class="output"></div>
+
+        <h2>Math Functions</h2>
+           <p>Enter numbers for operations:</p>
+           <input type="number" id="num1" placeholder="Enter first number">
+           <input type="number" id="num2" placeholder="Enter second number">
+           <button onclick="mathOperations()">Perform Math Operations</button>
+           <div id="mathOutput" class="output"></div>
+
+    </div>
+
+    <script>
+        function stringOperations() {
+            const input = document.getElementById("stringInput").value;
+
+            const length = input.length; // Length of the string
+            const upperCase = input.toUpperCase(); // Convert to uppercase
+            const lowerCase = input.toLowerCase(); // Convert to lowercase
+            const firstChar = input.charAt(0); // First character
+            const reversed = input.split("").reverse().join(""); // Reverse string
+            const includesExample = input.includes("demo"); // Check if "demo" is in the string
+
+            document.getElementById("stringOutput").innerHTML = `
+                <p>Length: ${length}</p>
+                <p>Uppercase: ${upperCase}</p>
+                <p>Lowercase: ${lowerCase}</p>
+                <p>First Character: ${firstChar}</p>
+                <p>Reversed: ${reversed}</p>
+                <p>Includes 'demo': ${includesExample}</p> `;
+         }
+        function mathOperations() {
+           const num1 = parseFloat(document.getElementById("num1").value);
+           const num2 = parseFloat(document.getElementById("num2").value);
+
+           const sum = num1 + num2; // Addition
+           const difference = num1 - num2; // Subtraction
+           const product = num1 * num2; // Multiplication
+           const quotient = num2 !== 0 ? num1 / num2 : "division by zero not possible."; // Division
+           const maxNum = Math.max(num1, num2); // Maximum of two numbers
+           const minNum = Math.min(num1, num2); // Minimum of two numbers
+
+           document.getElementById("mathOutput").innerHTML = `
+           <p>Sum: ${sum}</p>
+           <p>Difference: ${difference}</p>
+           <p>Product: ${product}</p>
+           <p>Quotient: ${quotient}</p>
+           <p>Maximum: ${maxNum}</p>
+           <p>Minimum: ${minNum}</p> `;
+         }
+    </script>
+</body>
+</html>
