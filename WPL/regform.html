@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .section {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #003366;
+        }
+        input[type="text"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #003366;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #005f8d;
+        }
+        label {
+            font-weight: bold;
+        }
+      </style>
+
+</head>
+<body>
+<center>
+    <h1>Student Registration Form</h1>
+</center>
+
+<div class="section">
+    <h2>Personal Details</h2>
+    <form>
+        <label for="fname">First name:</label>
+        <input type="text" name="fname" >
+
+        <label for="lname">Last name:</label>
+        <input type="text" name="lname" >
+
+        <label for="gender">Gender:</label><br>
+        <input type="radio" name="gender" value="male" >
+        <label for="gender">Male</label>
+        <input type="radio" name="gender" value="female">
+        <label for="gender">Female</label>
+        <input type="radio" name="gender" value="other">
+        <label for="gender">Other</label><br>
+
+        <label for="religion">Religion:</label>
+        <input type="text" name="religion" >
+
+        <label for="cast">Caste:</label>
+        <input type="text" name="cast" >
+
+        <label for="place">Place of Birth:</label>
+        <input type="text" name="place" >
+
+        <label for="language">Mother Tongue:</label>
+        <input type="text" name="language" >
+
+        <label for="adno">Admission Number:</label>
+        <input type="text" name="adno" >
+
+        <label for="nation">Nationality:</label>
+        <input type="text" name="nation" >
+
+        <label for="blood">Blood Group:</label>
+        <input type="text" name="blood" >
+
+        <label for="full_address">Full Address:</label>
+        <textarea id="full_address" name="full_address" rows="4" ></textarea>
+    </form>
+</div>
+
+<div class="section">
+    <h2>Parent Details</h2>
+    <label for="name">Father's name:</label>
+    <input type="text" name="name" >
+
+    <label for="mname">Mother's name:</label>
+    <input type="text" name="mname" >
+
+    <label for="fno">Father's mobile No:</label>
+    <input type="number" name="fno" >
+
+    <label for="mno">Mother's mobile No:</label>
+    <input type="number" name="mno" >
+
+    <label for="occupation">Father's occupation:</label>
+    <input type="text" name="occupation" >
+</div>
+
+<div class="section">
+    <h2>Education Details</h2>
+    <label for="qualification">Highest Qualification:</label>
+    <select id="qualification" name="qualification" >
+        <option value="bsc">BSc in Computer Science</option>
+        <option value="bca">BCA</option>
+        <option value="other">Other</option>
+    </select>
+
+    <label for="year">Year of Graduation:</label>
+    <input type="text" id="year" name="year" >
+
+    <label for="university">University:</label>
+    <input type="text" id="university" name="university" >
+
+    <label for="hsc_school">Higher Secondary School Name:</label>
+    <input type="text" id="hsc_school" name="hsc_school" >
+
+    <label for="hsc_year">Year of Completion (Higher Secondary):</label>
+    <input type="text" id="hsc_year" name="hsc_year" >
+
+    <label for="hsc_board">Board of Examination (Higher Secondary):</label>
+    <input type="text" id="hsc_board" name="hsc_board" >
+
+    <label for="ssc_school">Secondary School Name:</label>
+    <input type="text" id="ssc_school" name="ssc_school" >
+
+    <label for="ssc_year">Year of Completion (Secondary):</label>
+    <input type="text" id="ssc_year" name="ssc_year" >
+
+    <label for="ssc_board">Board of Examination (Secondary):</label>
+    <input type="text" id="ssc_board" name="ssc_board" >
+</div>
+
+<h3><b>Requirements Needed</b></h3>
+<input type="checkbox" name="hostel" value="hostel">
+<label for="hostel">Hostel</label><br>
+<input type="checkbox" name="bus" value="bus">
+<label for="bus"> College Bus</label><br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset"><br><br>
+
+</form>
+</body>
+</html>
