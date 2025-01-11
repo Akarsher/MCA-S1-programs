@@ -1,11 +1,12 @@
 # MCA-S1-programs 👨‍💻
 Welcome to my repository for MCA Semester 1 lab programs! This repository contains all the programs and exercises completed as part of my coursework in Data Structures using C, Web Programming Lab (WPL), and Python Programming.
-## Data Structures using C ©️
+## Data Structures using C ©️ 
 - Arrays, 
 - Linked Lists, 
 - Stacks and Queues, 
 - Trees and Graphs.
-## Web Programming Lab (WPL) 
+## Web Programming Lab (WPL) ![WebDeveloperMycrxnGIF](https://github.com/user-attachments/assets/4fa252f3-7ddf-4061-bbb3-0ac2c0e2c9cd)
+
 - HTML: Structuring webpages, 
 - CSS: Styling and layouts, 
 - JavaScript: form validation, dynamic content, 
