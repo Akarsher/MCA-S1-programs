@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Online exam</h2>
+    <form id="exam">
+        <p>Qusetion1</p>
+        <input type="radio" name="q1" value="ans1">ans1<br>
+        <input type="radio" name="q1" value="ans2">ans2<br>
+        <input type="radio" name="q1" value="ans3">ans3<br>
+        <p>Qusetion2</p>
+        <input type="radio" name="q2" value="ans1">ans1<br>
+        <input type="radio" name="q2" value="ans2">ans2<br>
+        <input type="radio" name="q2" value="ans3">ans3<br>
+        <p>Qusetion3</p>
+        <input type="radio" name="q3" value="ans1">ans1<br>
+        <input type="radio" name="q3" value="ans2">ans2<br>
+        <input type="radio" name="q3" value="ans3">ans3<br>
+        <button type="submint" onclick="return valuate()">Submit</button>
+    </form>
+    <p id="result"></p>
+    <script>
+        function valuate(){
+            let mark =0;
+            let correct ={
+                q1:"ans1",
+                q2:"ans2",
+                q3:"ans3"
+            }
+            for(i=1;i<=3;i++){
+               let ans=document.querySelector('input[name="q'+i+'"]:checked').value;
+                if(ans === correct['q'+i]){
+                mark++;
+                }
+            }
+            document.getElementById('result').innerText="you scored "+mark+" out of 3";
+            return false;
+        }
+    </script>
+        
+</body>
+</html>
