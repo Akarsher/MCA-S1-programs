@@ -1,5 +1,5 @@
 from graphics import rectangle,circle 
-from graphics.threed import cuboid,sphere 
+from Graphics.3D-graphics import cuboid,sphere 
 
 #rectangle 
 l=int(input("Enter Length of Rectangle : ")) 
