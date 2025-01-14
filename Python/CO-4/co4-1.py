@@ -20,7 +20,7 @@ q=int(input("Enter Breadth of Rectangle 2: "))
 rect2 = Rectangle(p,q)  
 a2=rect2.area()  
 print("Area of Rectangle 2 is : ",a2)  
-print("Perimeter of Rectangle 2 is : ",rect2.peri(),"\n")  
+print("Perimeter of Rectangle 2 is : ",rect2.perimeter(),"\n")  
   
   
 if a1 > a2:  
